@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人简介 - 张敏俐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: #1e293b;
+            border-radius: 24px;
+            padding: 48px 40px;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            border: 1px solid #334155;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #818cf8, #6366f1);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 600;
+            color: #fff;
+        }
+        h1 {
+            color: #f1f5f9;
+            font-size: 26px;
+            margin-bottom: 6px;
+        }
+        .title {
+            color: #94a3b8;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .desc {
+            color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .tag {
+            background: #334155;
+            color: #e2e8f0;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+        .btn {
+            display: inline-block;
+            background: #6366f1;
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #818cf8;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            background: #0f172a;
+            border-radius: 10px;
+            color: #34d399;
+            font-size: 13px;
+            border: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar">👨‍💻</div>
+        <h1>你的名字</h1>
+        <p class="title">Vibe Coding 全栈开发 · FDE落地工程师</p>
+        <p class="desc">
+            擅长 AI 辅助开发 · 快速原型落地 · 开源项目套壳交付<br />
+            熟悉 GitHub + Cloudflare Pages 自动化部署
+        </p>
+        <div class="tags">
+            <span class="tag">Vibe Coding</span>
+            <span class="tag">全栈开发</span>
+            <span class="tag">AI知识库</span>
+            <span class="tag">快速交付</span>
+        </div>
+        <a href="#" class="btn">🚀 查看我的项目</a>
+        <div class="status">✅ 已上线 · 可访问</div>
+    </div>
+</body>
+</html>
