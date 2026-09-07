@@ -1,119 +1,255 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>个人简介 - 张敏俐</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张敏俐 - 个人简介</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
         }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #0f172a;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .card {
-            background: #1e293b;
-            border-radius: 24px;
-            padding: 48px 40px;
-            max-width: 480px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-            text-align: center;
-            border: 1px solid #334155;
-        }
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #818cf8, #6366f1);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: 600;
-            color: #fff;
-        }
-        h1 {
-            color: #f1f5f9;
-            font-size: 26px;
-            margin-bottom: 6px;
-        }
-        .title {
-            color: #94a3b8;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .desc {
-            color: #cbd5e1;
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 28px;
-        }
-        .tag {
-            background: #334155;
-            color: #e2e8f0;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
-        .btn {
-            display: inline-block;
-            background: #6366f1;
-            color: #fff;
-            padding: 12px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background: #818cf8;
-        }
-        .status {
-            margin-top: 20px;
-            padding: 10px;
-            background: #0f172a;
-            border-radius: 10px;
-            color: #34d399;
-            font-size: 13px;
-            border: 1px solid #1e293b;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(22, 93, 255, 0.08);
+            }
         }
     </style>
 </head>
-<body>
-    <div class="card">
-        <div class="avatar">👨‍💻</div>
-        <h1>你的名字</h1>
-        <p class="title">Vibe Coding 全栈开发 · FDE落地工程师</p>
-        <p class="desc">
-            擅长 AI 辅助开发 · 快速原型落地 · 开源项目套壳交付<br />
-            熟悉 GitHub + Cloudflare Pages 自动化部署
-        </p>
-        <div class="tags">
-            <span class="tag">Vibe Coding</span>
-            <span class="tag">全栈开发</span>
-            <span class="tag">AI知识库</span>
-            <span class="tag">快速交付</span>
+<body class="bg-light text-dark font-sans">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">张敏俐</h1>
+            <div class="hidden md:flex gap-6 text-sm">
+                <a href="#about" class="hover:text-primary transition-colors">个人介绍</a>
+                <a href="#skill" class="hover:text-primary transition-colors">技术栈</a>
+                <a href="#experience" class="hover:text-primary transition-colors">工作经历</a>
+                <a href="#project" class="hover:text-primary transition-colors">项目案例</a>
+                <a href="#contact" class="hover:text-primary transition-colors">联系方式</a>
+            </div>
+            <button class="md:hidden text-lg">
+                <i class="fa fa-bars"></i>
+            </button>
         </div>
-        <a href="#" class="btn">🚀 查看我的项目</a>
-        <div class="status">✅ 已上线 · 可访问</div>
-    </div>
+    </nav>
+
+    <!-- Hero 头部 -->
+    <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div class="grid md:grid-cols-5 gap-8 items-center">
+            <div class="md:col-span-2 flex justify-center">
+                <div class="w-56 h-72 rounded-lg overflow-hidden card-shadow bg-slate-200 flex items-center justify-center">
+                    <i class="fa fa-user text-5xl text-slate-400"></i>
+                    <!-- 可替换为证件照图片 src -->
+                </div>
+            </div>
+            <div class="md:col-span-3">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">张敏俐</h2>
+                <div class="text-lg text-slate-600 mb-4">运维工程师 / 云平台运维</div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">本科</span>
+                    <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">广州商学院 软件工程</span>
+                    <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">团员</span>
+                    <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">可接受出差</span>
+                </div>
+                <p class="text-slate-700 text-balance leading-relaxed">
+                    23岁，软件工程本科，熟悉运维操作、数据库、脚本开发，拥有储能云平台运维、硬件测试实习经验；擅长故障排查、工单闭环、跨部门协同，具备云平台运维实施能力。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人介绍 -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-14">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">个人介绍</h3>
+        <div class="bg-white rounded-xl p-6 md:p-8 card-shadow">
+            <p class="leading-relaxed text-slate-700 mb-4">
+                广州商学院软件工程本科，主攻云平台运维方向，熟悉数据库运维、Python/Go自动化脚本开发，具备真实企业储能云平台运维实施实习经历。
+            </p>
+            <p class="leading-relaxed text-slate-700 mb-4">
+                擅长平台巡检调试、设备现场实施、故障分析定位、运维文档台账整理；熟悉工单流转流程，擅长跨岗位跨部门协同推进问题闭环。同时拥有前端、AI应用开发、静态网站部署能力，可落地AI知识库RAG类项目。
+            </p>
+            <p class="leading-relaxed text-slate-700">
+                持有HarmonyOS应用开发者高级证书，获全国大学生“人工智能+”创新创业大赛一等奖；沟通协调能力良好，抗压性强，能够接受出差。
+            </p>
+        </div>
+    </section>
+
+    <!-- 技术栈 -->
+    <section id="skill" class="max-w-6xl mx-auto px-4 py-14 bg-slate-50 rounded-2xl">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">技术栈</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 运维后端 -->
+            <div class="bg-white rounded-xl p-6 card-shadow">
+                <div class="text-primary text-xl mb-3"><i class="fa fa-server"></i></div>
+                <h4 class="font-semibold text-lg mb-3">运维 & 后端</h4>
+                <ul class="space-y-2 text-slate-600">
+                    <li><i class="fa fa-check text-primary mr-2"></i>MySQL数据库，SQL编写</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>Python / Go 自动化脚本</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>云平台运维、服务部署调试</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>基础网络协议，故障排查</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>工单流程、运维文档台账</li>
+                </ul>
+            </div>
+            <!-- 前端 -->
+            <div class="bg-white rounded-xl p-6 card-shadow">
+                <div class="text-primary text-xl mb-3"><i class="fa fa-code"></i></div>
+                <h4 class="font-semibold text-lg mb-3">前端</h4>
+                <ul class="space-y-2 text-slate-600">
+                    <li><i class="fa fa-check text-primary mr-2"></i>HTML / CSS / JavaScript</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>Vue基础，SpringBoot对接调试</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>响应式页面开发</li>
+                </ul>
+            </div>
+            <!-- AI & 部署 -->
+            <div class="bg-white rounded-xl p-6 card-shadow">
+                <div class="text-primary text-xl mb-3"><i class="fa fa-cloud"></i></div>
+                <h4 class="font-semibold text-lg mb-3">AI应用 & 部署</h4>
+                <ul class="space-y-2 text-slate-600">
+                    <li><i class="fa fa-check text-primary mr-2"></i>Github + Cloudflare静态部署</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>AI知识库RAG项目落地</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>应用部署、服务调试排障</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作经历 -->
+    <section id="experience" class="max-w-6xl mx-auto px-4 py-14">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">工作经历</h3>
+        <div class="space-y-6">
+            <!-- 经历1 -->
+            <div class="bg-white rounded-xl p-6 md:p-8 card-shadow">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h4 class="font-semibold text-lg">广东晓鸟科技技术有限公司 | 软件工程师</h4>
+                    <span class="text-sm text-slate-500">2026.06‑2026.08</span>
+                </div>
+                <ul class="space-y-2 text-slate-700 mt-4">
+                    <li><i class="fa fa-angle-right text-primary mr-2"></i>储能云平台日常巡检、功能调试、业务上线配置；Python/Go编写运维脚本，处理平台异常保障业务稳定。</li>
+                    <li><i class="fa fa-angle-right text-primary mr-2"></i>储能柜现场实施运维，设备调试、固件升级；收集故障信息输出故障记录。</li>
+                    <li><i class="fa fa-angle-right text-primary mr-2"></i>运维台账文档整理，参与技术复盘；跟进工单，协同多部门完成故障闭环。</li>
+                </ul>
+            </div>
+            <!-- 经历2 -->
+            <div class="bg-white rounded-xl p-6 md:p-8 card-shadow">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h4 class="font-semibold text-lg">东莞摩普科技有限公司 | 硬件测试实习生</h4>
+                    <span class="text-sm text-slate-500">2025.06‑2025.12</span>
+                </div>
+                <ul class="space-y-2 text-slate-700 mt-4">
+                    <li><i class="fa fa-angle-right text-primary mr-2"></i>协助制定执行测试计划，功能测试，记录缺陷，跟进工单闭环。</li>
+                    <li><i class="fa fa-angle-right text-primary mr-2"></i>协助任务分配、进度管控，优化团队协作流程。</li>
+                    <li><i class="fa fa-angle-right text-primary mr-2"></i>对接研发定位软硬件故障，跨岗位协同解决问题。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目案例 -->
+    <section id="project" class="max-w-6xl mx-auto px-4 py-14 bg-slate-50 rounded-2xl">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">项目案例</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- 项目1 -->
+            <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                <div class="h-44 bg-slate-200 flex items-center justify-center">
+                    <i class="fa fa-hotel text-4xl text-slate-400"></i>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-semibold text-lg mb-2">基于SpringBoot+Vue酒店管理系统</h4>
+                    <div class="text-sm text-slate-500 mb-3">2024.03‑2024.06｜核心开发</div>
+                    <p class="text-slate-700 text-sm mb-4">部署调试后端服务，MySQL数据库搭建与SQL编写；接口调试，服务异常排查。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">SpringBoot</span>
+                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">Vue</span>
+                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 项目2 占位 RAG知识库 -->
+            <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                <div class="h-44 bg-slate-200 flex items-center justify-center">
+                    <i class="fa fa-database text-4xl text-slate-400"></i>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-semibold text-lg mb-2">AI知识库RAG项目（待完善）</h4>
+                    <div class="text-sm text-slate-500 mb-3">项目占位</div>
+                    <p class="text-slate-700 text-sm mb-4">AI知识库问答落地，文档解析、向量库、RAG检索问答；Github+Cloudflare静态部署。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">RAG</span>
+                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">AI应用</span>
+                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">Cloudflare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 证书荣誉 -->
+    <section class="max-w-6xl mx-auto px-4 py-14">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">证书与荣誉</h3>
+        <div class="bg-white rounded-xl p-6 md:p-8 card-shadow">
+            <ul class="space-y-3 text-slate-700">
+                <li><i class="fa fa-trophy text-primary mr-2"></i>HarmonyOS 应用开发者高级证书</li>
+                <li><i class="fa fa-trophy text-primary mr-2"></i>全国大学生 “人工智能 +” 创新创业大赛一等奖</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 py-14 bg-slate-800 text-white rounded-2xl mb-12">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-white pl-3">联系方式</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <i class="fa fa-phone text-xl"></i>
+                    <span>15113823337</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa fa-envelope text-xl"></i>
+                    <span>15113823337@163.com</span>
+                </div>
+            </div>
+            <div>
+                <p class="text-slate-300">求职意向：运维工程师 / 云平台运维</p>
+                <p class="text-slate-300 mt-2">期望能够从事云平台运维、系统运维、应用部署相关工作。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-6 text-center text-slate-500 text-sm border-t border-slate-200">
+        <p>© 2026 张敏俐个人主页 | 静态网页，Github+Cloudflare可直接部署</p>
+    </footer>
+
+    <!-- 简单平滑滚动 -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(el => {
+            el.addEventListener('click', function(e){
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetDom = document.querySelector(targetId);
+                if(targetDom){
+                    targetDom.scrollIntoView({behavior:'smooth'});
+                }
+            })
+        })
+    </script>
 </body>
 </html>
