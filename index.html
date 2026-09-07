@@ -53,15 +53,9 @@
 
     <!-- Hero 头部 -->
     <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
-        <div class="grid md:grid-cols-5 gap-8 items-center">
-            <div class="md:col-span-2 flex justify-center">
-                <div class="w-56 h-72 rounded-lg overflow-hidden card-shadow bg-slate-200 flex items-center justify-center">
-                    <i class="fa fa-user text-5xl text-slate-400"></i>
-                    <!-- 可替换为证件照图片 src -->
-                </div>
-            </div>
-            <div class="md:col-span-3">
-                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">张敏俐</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold mb-4">张敏俐</h2>
                 <div class="text-lg text-slate-600 mb-4">运维工程师 / 云平台运维</div>
                 <div class="flex flex-wrap gap-2 mb-6">
                     <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">本科</span>
@@ -72,6 +66,30 @@
                 <p class="text-slate-700 text-balance leading-relaxed">
                     23岁，软件工程本科，熟悉运维操作、数据库、脚本开发，拥有储能云平台运维、硬件测试实习经验；擅长故障排查、工单闭环、跨部门协同，具备云平台运维实施能力。
                 </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 md:p-8 card-shadow border border-slate-100">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <i class="fa fa-user-circle-o text-primary"></i>
+                    个人概览
+                </h3>
+                <ul class="space-y-3 text-slate-700">
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-1"></i>
+                        <span>熟悉云平台运维、服务部署、巡检调试与故障排查</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-1"></i>
+                        <span>掌握 MySQL、Python / Go 脚本开发与运维自动化</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-1"></i>
+                        <span>具备前端基础、AI 应用开发与静态站点部署能力</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-1"></i>
+                        <span>可基于 Github + Cloudflare 完成静态项目上线</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -96,12 +114,14 @@
     <section id="skill" class="max-w-6xl mx-auto px-4 py-14 bg-slate-50 rounded-2xl">
         <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">技术栈</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 运维后端 -->
+            <!-- 运维 & 后端 -->
             <div class="bg-white rounded-xl p-6 card-shadow">
-                <div class="text-primary text-xl mb-3"><i class="fa fa-server"></i></div>
+                <div class="text-primary text-xl mb-3">
+                    <i class="fa fa-server"></i>
+                </div>
                 <h4 class="font-semibold text-lg mb-3">运维 & 后端</h4>
                 <ul class="space-y-2 text-slate-600">
-                    <li><i class="fa fa-check text-primary mr-2"></i>MySQL数据库，SQL编写</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>MySQL 数据库，SQL 编写</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>Python / Go 自动化脚本</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>云平台运维、服务部署调试</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>基础网络协议，故障排查</li>
@@ -110,21 +130,25 @@
             </div>
             <!-- 前端 -->
             <div class="bg-white rounded-xl p-6 card-shadow">
-                <div class="text-primary text-xl mb-3"><i class="fa fa-code"></i></div>
+                <div class="text-primary text-xl mb-3">
+                    <i class="fa fa-code"></i>
+                </div>
                 <h4 class="font-semibold text-lg mb-3">前端</h4>
                 <ul class="space-y-2 text-slate-600">
                     <li><i class="fa fa-check text-primary mr-2"></i>HTML / CSS / JavaScript</li>
-                    <li><i class="fa fa-check text-primary mr-2"></i>Vue基础，SpringBoot对接调试</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>Vue 基础，SpringBoot 对接调试</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>响应式页面开发</li>
                 </ul>
             </div>
             <!-- AI & 部署 -->
             <div class="bg-white rounded-xl p-6 card-shadow">
-                <div class="text-primary text-xl mb-3"><i class="fa fa-cloud"></i></div>
-                <h4 class="font-semibold text-lg mb-3">AI应用 & 部署</h4>
+                <div class="text-primary text-xl mb-3">
+                    <i class="fa fa-cloud"></i>
+                </div>
+                <h4 class="font-semibold text-lg mb-3">AI 应用 & 部署</h4>
                 <ul class="space-y-2 text-slate-600">
-                    <li><i class="fa fa-check text-primary mr-2"></i>Github + Cloudflare静态部署</li>
-                    <li><i class="fa fa-check text-primary mr-2"></i>AI知识库RAG项目落地</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>Github + Cloudflare 静态部署</li>
+                    <li><i class="fa fa-check text-primary mr-2"></i>AI 知识库 RAG 项目落地</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>应用部署、服务调试排障</li>
                 </ul>
             </div>
@@ -135,7 +159,6 @@
     <section id="experience" class="max-w-6xl mx-auto px-4 py-14">
         <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">工作经历</h3>
         <div class="space-y-6">
-            <!-- 经历1 -->
             <div class="bg-white rounded-xl p-6 md:p-8 card-shadow">
                 <div class="flex flex-wrap justify-between items-start mb-3">
                     <h4 class="font-semibold text-lg">广东晓鸟科技技术有限公司 | 软件工程师</h4>
@@ -147,7 +170,7 @@
                     <li><i class="fa fa-angle-right text-primary mr-2"></i>运维台账文档整理，参与技术复盘；跟进工单，协同多部门完成故障闭环。</li>
                 </ul>
             </div>
-            <!-- 经历2 -->
+
             <div class="bg-white rounded-xl p-6 md:p-8 card-shadow">
                 <div class="flex flex-wrap justify-between items-start mb-3">
                     <h4 class="font-semibold text-lg">东莞摩普科技有限公司 | 硬件测试实习生</h4>
@@ -166,36 +189,25 @@
     <section id="project" class="max-w-6xl mx-auto px-4 py-14 bg-slate-50 rounded-2xl">
         <h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-3">项目案例</h3>
         <div class="grid md:grid-cols-2 gap-6">
-            <!-- 项目1 -->
-            <div class="bg-white rounded-xl overflow-hidden card-shadow">
-                <div class="h-44 bg-slate-200 flex items-center justify-center">
-                    <i class="fa fa-hotel text-4xl text-slate-400"></i>
-                </div>
-                <div class="p-6">
-                    <h4 class="font-semibold text-lg mb-2">基于SpringBoot+Vue酒店管理系统</h4>
-                    <div class="text-sm text-slate-500 mb-3">2024.03‑2024.06｜核心开发</div>
-                    <p class="text-slate-700 text-sm mb-4">部署调试后端服务，MySQL数据库搭建与SQL编写；接口调试，服务异常排查。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">SpringBoot</span>
-                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">Vue</span>
-                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">MySQL</span>
-                    </div>
+            <div class="bg-white rounded-xl p-6 card-shadow">
+                <h4 class="font-semibold text-lg mb-2">基于 SpringBoot + Vue 酒店管理系统</h4>
+                <div class="text-sm text-slate-500 mb-3">2024.03‑2024.06｜核心开发</div>
+                <p class="text-slate-700 text-sm mb-4">部署调试后端服务，MySQL 数据库搭建与 SQL 编写；接口调试，服务异常排查。</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-100 px-2 py-1 rounded">SpringBoot</span>
+                    <span class="text-xs bg-slate-100 px-2 py-1 rounded">Vue</span>
+                    <span class="text-xs bg-slate-100 px-2 py-1 rounded">MySQL</span>
                 </div>
             </div>
-            <!-- 项目2 占位 RAG知识库 -->
-            <div class="bg-white rounded-xl overflow-hidden card-shadow">
-                <div class="h-44 bg-slate-200 flex items-center justify-center">
-                    <i class="fa fa-database text-4xl text-slate-400"></i>
-                </div>
-                <div class="p-6">
-                    <h4 class="font-semibold text-lg mb-2">AI知识库RAG项目（待完善）</h4>
-                    <div class="text-sm text-slate-500 mb-3">项目占位</div>
-                    <p class="text-slate-700 text-sm mb-4">AI知识库问答落地，文档解析、向量库、RAG检索问答；Github+Cloudflare静态部署。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">RAG</span>
-                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">AI应用</span>
-                        <span class="text-xs bg-slate-100 px-2 py-1 rounded">Cloudflare</span>
-                    </div>
+
+            <div class="bg-white rounded-xl p-6 card-shadow">
+                <h4 class="font-semibold text-lg mb-2">AI 知识库 RAG 项目</h4>
+                <div class="text-sm text-slate-500 mb-3">项目占位｜待完善</div>
+                <p class="text-slate-700 text-sm mb-4">AI 知识库问答落地，文档解析、向量库、RAG 检索问答；Github + Cloudflare 静态部署。</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-100 px-2 py-1 rounded">RAG</span>
+                    <span class="text-xs bg-slate-100 px-2 py-1 rounded">AI 应用</span>
+                    <span class="text-xs bg-slate-100 px-2 py-1 rounded">Cloudflare</span>
                 </div>
             </div>
         </div>
@@ -235,7 +247,7 @@
 
     <!-- 页脚 -->
     <footer class="py-6 text-center text-slate-500 text-sm border-t border-slate-200">
-        <p>© 2026 张敏俐个人主页 | 静态网页，Github+Cloudflare可直接部署</p>
+        <p>© 2026 张敏俐个人主页 | 静态网页，Github + Cloudflare 可直接部署</p>
     </footer>
 
     <!-- 简单平滑滚动 -->
